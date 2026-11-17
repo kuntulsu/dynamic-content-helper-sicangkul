@@ -26,9 +26,11 @@ async def get_articles(page: int = 1):
         for article in articles:
             thumbnail = article.find("img").get("src")
             title = article.find(class_="text-heading").a.text.strip()
+            link = article.find(class_="text-heading").a.get("href")
             subtitle = article.find("p").text.strip()
             result.append({
                 "thumbnail": thumbnail,
+                "link": link,
                 "title": title,
                 "subtitle": subtitle
             })
