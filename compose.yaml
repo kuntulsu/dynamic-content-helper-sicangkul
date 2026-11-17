@@ -1,0 +1,10 @@
+services:
+  content-api:
+    build: .
+    container_name: pecangaan-content-api
+    restart: unless-stopped
+    ports:
+      - "8082:8000"
+    environment:
+      CACHE_TTL_SECONDS: "300"
+      REQUEST_TIMEOUT_SECONDS: "15"

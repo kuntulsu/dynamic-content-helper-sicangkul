@@ -1,0 +1,10 @@
+.git
+.venv
+venv
+env
+Include
+Lib
+Scripts
+__pycache__
+*.py[cod]
+.env

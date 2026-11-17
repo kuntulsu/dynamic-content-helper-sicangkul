@@ -11,6 +11,16 @@ python -m uvicorn main:app --reload
 
 Open `http://127.0.0.1:8000/docs` for interactive API documentation.
 
+## Run with Docker
+
+With Docker Engine and the Compose plugin installed, run this from the project directory:
+
+```powershell
+docker compose up --build -d
+```
+
+The API will be available at `http://localhost:8082` and its docs at `http://localhost:8082/docs`. To stop it, run `docker compose down`.
+
 ## Endpoints
 
 - `GET /api/articles` — article listing from the home page
